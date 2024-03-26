@@ -1,0 +1,35 @@
+.box{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgb(249, 249, 249);
+    border-radius: 10px;
+   margin-bottom: 20px;
+   height: 100px;
+}
+
+.catListimg{
+    border-radius: 50%;
+    height: 80px;
+    width: 80px;
+}
+
+.btnn{
+    padding: 5px 15px 5px 15px ;
+    border-radius: 5px;
+    color: rgb(235, 234, 234);
+
+}
+
+.edit{
+    background-color: blue;
+
+}
+.delete{
+    background-color: red;
+}
+
+.catText{
+    font-size: large;
+    width: 150px;
+}

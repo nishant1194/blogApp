@@ -1,0 +1,27 @@
+
+
+
+
+.cardContanerAdmin{
+    display: flex;
+    justify-content :flex-start;
+    flex-wrap: wrap;
+
+}
+
+.cardblogAdmin{
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    margin: 0px 10px 40px 10px ;
+
+    align-items: center;
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255);
+    padding: 30px 10px 20px 10px;
+    box-shadow: 1px 1px 10px rgb(113, 113, 113);
+
+}
+
+
+

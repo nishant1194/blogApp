@@ -1,0 +1,23 @@
+.Aboutsection{
+    display: flex;
+
+}
+
+
+
+
+.rightAbout{
+    width: 25%;
+    height: 100vh;
+    background-color: rgb(103, 103, 103);
+}
+
+.catlistt{
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.catlistt:hover{
+    background-color: rgb(150, 152, 153);
+
+}

@@ -1,0 +1,22 @@
+.blogInput{
+    height: 40px;
+    padding: 5px;
+    border: none;
+    outline: line;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.formitemm{
+    margin-bottom: 10px;
+
+
+}
+
+.catForm{
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+    flex-wrap: wrap;
+}
+
