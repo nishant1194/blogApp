@@ -23,5 +23,13 @@
 
 }
 
-
+.blogDele{
+    width: 120px;   
+    padding: 5px;
+    border-radius: 30px;
+    background-color: blue;
+    color: azure;
+    font-size: 16px;
+    margin-top: 20px;
+}
 

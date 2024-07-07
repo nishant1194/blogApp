@@ -3,13 +3,16 @@ import '../logout/logoutt.css'
 
 function Logoutt() {
 
-  
 
     const SubmitHandler =(event) =>{
-        event.preventDefault() ;
+      localStorage.removeItem('token');
+      event.preventDefault() ;
+      alert("logout successfully");
+      window.location.reload();
     }
 
     return (
+      
     <div>
      <div className="loginContainerrr">
      <div className="loginBoxxx">

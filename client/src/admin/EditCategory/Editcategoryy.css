@@ -1,0 +1,36 @@
+
+
+.catFormm
+{
+display: flex;
+flex-direction: column;
+}
+
+.catInputt{
+    height: 40px;
+    width: 50%;
+    padding: 5px;
+    margin-bottom: 20px;
+    border: none;
+    outline: line;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.catSubmitt{
+width: 50%;   
+padding: 10px;
+border-radius: 30px;
+background-color: blue;
+color: azure;
+font-size: 16px;
+}
+
+.inputImgg{
+    height: 200px;
+    width: 300px;
+}
+
+.formitemm{
+    margin-bottom: 20px;
+}

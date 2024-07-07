@@ -1,23 +1,123 @@
-.Aboutsection{
-    display: flex;
-
-}
-
-
-
 
 .rightAbout{
-    width: 25%;
-    height: 100vh;
-    background-color: rgb(103, 103, 103);
+    background-color: rgb(255, 255, 255);
+    height: 55px;
+    justify-content: center;
+    align-items: center;
 }
 
 .catlistt{
-    padding: 10px;
+    padding: 5px 6px 5px 6px ;
     border-radius: 10px;
+    margin:5px;
+    font-size: large;
+    align-items: center;
+    align-content: center;
+    text-align: center;
 }
+.cattt{
+    margin-left: 30px;
+    padding: 10px 20px 10px 20px ;
 
+}
 .catlistt:hover{
     background-color: rgb(150, 152, 153);
 
 }
+
+.cardContanerr{
+    margin: 40px 30px 10px 30px;
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+    width: 100%;
+      
+}
+
+.prevnextbtns{
+    color: #418df1;
+    font-size: large;
+    background-color: #ffffff;
+    border: 2px solid rgb(255, 249, 249);
+    margin-bottom: 0px;
+    padding: 10px 30px 10px 30px;
+    border-radius: 10px;
+}
+.prevnextbtns:hover{
+    background-color: #c9c5c5;
+    color: #00050b;
+
+
+}
+
+.cardblogg{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    height: 350px;
+    align-items :start;
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255);
+    padding: 30px 20px 20px 20px;
+    box-shadow: 1px 1px 10px rgb(113, 113, 113);
+
+}
+.butttonSection{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+.line{
+    height:3px;
+    background-color: #ececed;
+    margin: 40px 60px 40px 60px ;
+}
+.rightside{
+    display: flex ;
+    flex-direction: column ;
+    width: 25vh ;
+    height: 100vh ;
+    background-color: rgb(103, 103, 103)
+}
+
+@media screen and ((min-width:984px) and (max-width: 1265px)) {
+    .cardblogg{
+        width: 29%;
+    }
+    
+  }
+
+  @media screen and ((min-width:820px) and (max-width: 984px)) {
+    .cardblogg{
+        width: 28%;
+    }
+    
+  }
+  @media screen and ((min-width:572px) and (max-width: 820px)) {
+    .cardblogg{
+        width: 44%;
+    }
+    
+  }
+ 
+    @media screen and ((max-width: 572px)) {
+        .cardblogg{
+            width: 93%;
+        }
+        .cardContanerr{
+            margin: 40px 2px 10px 2px;
+        }
+        
+    }
+
+    @media screen and (max-width: 752px) {
+        .rightside {
+            display: none;
+         
+        }
+       
+       
+    }
+
+

@@ -1,0 +1,43 @@
+.section12{
+    display: flex;
+    flex-direction: column;
+}
+.mainfooter{
+    background-color: #111111;
+    color: aliceblue;
+    display: flex;
+   justify-content: space-around;
+   padding: 20px 20px 40px 20px;
+  
+}
+
+.section11{
+    margin-top: 20px;
+    font-size: 50px;
+}
+.footeritteems{
+    font-size: 20px;
+    list-style: none;
+    margin: 10px 0px 0px 0px;
+    color: aliceblue;
+    text-decoration: none;
+    
+}
+.exploref{
+    font-size: 45px;
+    list-style: none;
+    margin: 20px 0px 20px 0px;
+    text-decoration: none;
+
+    color: aliceblue;
+
+}
+.section13{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 50px;
+}
+.sec13div{
+    display: flex;
+    justify-content: space-between;
+}

@@ -3,13 +3,12 @@ import "./App.css";
 import AdminLayout from "./admin/AdminLayout";
 import Dashboard from "../src/admin/dashboard/Dashboard.js";
 import Loggin from "./admin/login/Loggin.js";
-import Abc from "../src/user/abc.js";
+import SignUp from "./admin/SignUp/SignUp.js";
 import CategoryList from "./admin/Categorylist/CategoryList.js";
 import BlogList from "./admin/Bloglist/BlogList.js";
 import AddBlog from "./admin/Addblog/AddBlog.js";
 import AddCategoryList from "./admin/Addcategory/AddCategoryList.js";
 import Home from "./admin/Home/Home.js";
-import Alpha from "./user/Alpha.js";
 import CommentList from './admin/CommentList/CommentList.js'
 import UserLayout from "./user/UserLayout.js";
 import UserHome from "./user/Home/UserHome.js";
@@ -17,6 +16,7 @@ import AboutUser from "./user/AboutMe/AboutUser.js";
 import Contact from "./user/Contact/Contact.js";
 import Bloog from "./user/Blog/Bloog.js";
 import Logoutt from "./admin/logout/Logoutt.js";
+import Editcategory from "./admin/EditCategory/Editcategory.js";
 
 const router = createBrowserRouter([
   {
@@ -48,6 +48,10 @@ const router = createBrowserRouter([
     element: <Loggin />,
   },
   {
+    path: "admin/SignUp",
+    element: <SignUp />,
+  },
+  {
     path: "admin/dashboard",
     element: <Dashboard />,
     children: [
@@ -70,6 +74,10 @@ const router = createBrowserRouter([
       {
         path: "admin/dashboard/add-category",
         element: <AddCategoryList />,
+      },
+      {
+        path: "admin/dashboard/edit-category",
+        element: <Editcategory />,
       },
       {
         path: "admin/dashboard/comment",

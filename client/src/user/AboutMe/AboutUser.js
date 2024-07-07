@@ -1,37 +1,51 @@
-import React from 'react'
+import React from "react";
+import bb from "../../assets/BloggingClipart.png";
+import Navbar from "../Navbar/Navbar";
+import "../AboutMe/about.css";
 import Nishant from '../../assets/Nishant.JPG'
-import Navbar from '../Navbar/Navbar'
-
 
 function AboutUser() {
   return (
-
     <div>
-        <Navbar />
-     <section>
-        <div className="userCategory">
-          
-          <div className="usercatItems">
-          <img src={Nishant} alt="" style={{height:"200px", width:"200px", borderRadius:"50%", marginRight:"20px", marginLeft:"20px" ,boxShadow:"2px 2px 5px rgb(113, 113, 118) "}}/>
-            <div style={{marginTop:"15px"}}>Category</div>
-          </div>
-          <div className="usercatItems">
-          <img src={Nishant} alt="" style={{height:"200px", width:"200px", borderRadius:"50%", marginRight:"20px", marginLeft:"20px" ,boxShadow:"2px 2px 5px rgb(113, 113, 118) "}}/>
-            <div style={{marginTop:"15px"}}>Category</div>
-          </div>
-          <div className="usercatItems">
-          <img src={Nishant} alt="" style={{height:"200px", width:"200px", borderRadius:"50%", marginRight:"20px", marginLeft:"20px" ,boxShadow:"2px 2px 5px rgb(113, 113, 118) "}}/>
-            <div style={{marginTop:"15px"}}>Category</div>
-          </div>
-          <div className="usercatItems">
-          <img src={Nishant} alt="" style={{height:"200px", width:"200px", borderRadius:"50%", marginRight:"20px", marginLeft:"20px" ,boxShadow:"2px 2px 5px rgb(113, 113, 118) "}}/>
-            <div style={{marginTop:"15px"}}>Category</div>
-          </div>
+      <Navbar />
+      <div className="aboout">About BlogsApp</div>
+      <div style={{ display: "flex", justifyContent: "center" }}>
+        <img src={bb} alt="" className="bloggimgg" />
+      </div>
+      <p className="content" style={{ marginTop: "50px" }}>
+        Welcome to BlogApp. We're dedicated to providing you the very best
+        blogging expericence, with an emphasis on uniqueness, quality, and
+        reliability.
+      </p>
+      <p className="content">
+        We hope you enjoy our content, e.g., articles, tips, reviews as much as
+        we enjoy offering them to you. If you have any questions or comments,
+        please don't hesitate to contact us.
+      </p>
+      <p className="content">
+        Thank you for visiting BlogApp. We hope to see you again soon!
+        <div className="aboout" style={{ margin: "70px 0px 70px 0px " }}>
+          {" "}
+          Abount Me
         </div>
 
-      </section>
+        <div className="meAbout">
+       <div><p>
+          Hey there everyone!
+          <br />I am Nishant. Currently pursuing my B.Tech in one of the
+          prestigious college of India, Indian Institute of Technology, Ropar.
+          <br /> I am a full stack developer. I develope webApps using MERN
+          stack.  <br />I also made mobile Apps with React-Native. <br /> Check out my resume <a href="https://docs.google.com/document/d/18LSfE0S6uyISmD60QPehtbu8ELwICRlhMgX0aIXml_U/edit?usp=sharing">here</a> and protfollio <a href="https://portfolio-sigma-one-53.vercel.app/#about">here</a>.
+
+          <div style={{display:"flex" , justifyContent:"space-evenly"}}><button className="bbtn"><a href="https://portfolio-sigma-one-53.vercel.app/#about">Portfollio</a></button>
+          <button className="bbtn"><a href="https://docs.google.com/document/d/18LSfE0S6uyISmD60QPehtbu8ELwICRlhMgX0aIXml_U/edit?usp=sharing"> Resume</a></button></div>
+        </p>
+        </div>
+        <img src={Nishant} alt="" className="imgaboutme"/>
+        </div> 
+      </p>
     </div>
-  )
+  );
 }
 
-export default AboutUser
+export default AboutUser;

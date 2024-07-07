@@ -33,3 +33,13 @@
     font-size: large;
     width: 150px;
 }
+
+.catEdit{
+    width: 24%;   
+    padding: 10px;
+    border-radius: 30px;
+    background-color: blue;
+    color: azure;
+    font-size: 16px;
+    margin-left : 10px
+    }
