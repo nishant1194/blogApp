@@ -9,7 +9,11 @@ const categoryRoute = require('./admin/routes/Category') ;
 const authRoute = require('./admin/routes/Auth') ;
 const commentRoute = require('./admin/routes/Comment') ;
 
-app.use(cors());
+app.use(cors({
+    origin : ["https://blog-app-neew.vercel.app/"],
+    methods : ["GET" , "POST" , "PUT" , "DELETE" ],
+    credentials: true
+    ));
 app.use(bodyPareser.urlencoded({extended:false})) ;
 app.use(bodyPareser.json()) ;
 
