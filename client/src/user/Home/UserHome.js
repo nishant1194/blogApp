@@ -76,7 +76,7 @@ function UserHome() {
    
 
       axios
-        .get("http://localhost:8000/blog")
+        .get("https://blog-app-api-ten.vercel.app/blog")
 
         .then((res) => {
           console.log(res.data.blogs);
