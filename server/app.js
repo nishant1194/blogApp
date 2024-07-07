@@ -10,7 +10,7 @@ const authRoute = require('./admin/routes/Auth') ;
 const commentRoute = require('./admin/routes/Comment') ;
 
 app.use(cors({
-    origin : ["https://blog-app-neew.vercel.app"],
+    origin : ["https://blog-apps-dp76fgz45-nishants-projects-628f56e9.vercel.app"],
     methods : ["GET" , "POST" , "PUT" , "DELETE" ],
     credentials: true
     ));
