@@ -56,8 +56,12 @@ function UserHome() {
   const getcategory = async() => {
     await axios.get("https://blog-app-api-ten.vercel.app/category").then((res) => {
       console.log(res.data.categorys);
+      console.log("get req a");
       setcategory(res.data.categorys);
-    });
+    }).catch((err)=>{
+    console.log(err);
+
+    }) 
   };
   useEffect(() => {
     getcategory();
