@@ -54,7 +54,7 @@ function UserHome() {
   const [blog, setBlog] = useState([]);
   const [category, setcategory] = useState([{name:"hena" , imageUrl:"ivhvhj"}]);
   const getcategory = async() => {
-  axios.get('https://blog-app-api-ten.vercel.app/blog', {
+  axios.get("https://blog-app-api-ten.vercel.app/category", {
   withCredentials: true
 })
 .then((res) => {
