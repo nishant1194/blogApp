@@ -84,8 +84,14 @@ function UserHome() {
 
         .then((res) => {
           console.log(res.data.blogs);
+          console.log("get req");
           setBlog(res.data.blogs);
-        });
+        })
+        .catch((err)=>{
+    console.log(err);
+
+    }) 
+        ;
     
   };
   
