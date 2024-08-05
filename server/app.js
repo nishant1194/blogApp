@@ -9,8 +9,8 @@ const categoryRoute = require('./admin/routes/Category') ;
 const authRoute = require('./admin/routes/Auth') ;
 const commentRoute = require('./admin/routes/Comment') ;
 
-app.use(bodyPareser.urlencoded({extended:false})) ;
-app.use(bodyPareser.json()) ;
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
 app.use(cors());
 
 
