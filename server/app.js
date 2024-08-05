@@ -11,6 +11,8 @@ const commentRoute = require('./admin/routes/Comment') ;
 
 app.use(bodyPareser.urlencoded({extended:false})) ;
 app.use(bodyPareser.json()) ;
+app.use(cors());
+
 
 async function connectToDatabase() {
     try {
@@ -24,7 +26,6 @@ async function connectToDatabase() {
   }
   
   connectToDatabase();
-app.use(cors());
 
 
 app.use('/blog' , blogRoute) ;
