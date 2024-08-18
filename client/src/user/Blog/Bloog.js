@@ -51,8 +51,6 @@ function Bloog() {
 
   //get all the blogs
   const getBlogs = () => {
-    console.log(token + " = token");
-    if (token) {
       axios
         .get("https://blog-app-api-ten.vercel.app/blog")
 
@@ -60,7 +58,7 @@ function Bloog() {
           console.log(res.data.blogs);
           setBlog(res.data.blogs);
         });
-    }
+    
   };
 
   //get blog by cayegory name
