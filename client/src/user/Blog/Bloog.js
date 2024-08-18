@@ -37,9 +37,9 @@ function Bloog() {
   const [category, setCategory] = useState([]);
 
   useEffect(() => {
-    getBlogsbyCategory();
-    getcategorys();
     getBlogs();
+    getcategorys();
+    getBlogsbyCategory();
   }, []);
 
   // icon setup function
@@ -64,7 +64,7 @@ function Bloog() {
   //get blog by cayegory name
 
   const getBlogsbyCategory = (category) => {
-    if (token) {
+ 
       axios
         .get(`https://blog-app-api-ten.vercel.app/blog/category/${category}`, {
           headers: { Authorization: "Bearer " + token },
@@ -74,14 +74,13 @@ function Bloog() {
           console.log(res.data.blog);
           setBlog(res.data.blog);
         });
-    }
+   
   };
 
   //get categorys
 
   const getcategorys = () => {
-    console.log(token + " = token");
-    if (token) {
+   
       axios
         .get("https://blog-app-api-ten.vercel.app/category")
 
@@ -89,7 +88,7 @@ function Bloog() {
           console.log(res.data.categorys);
           setCategory(res.data.categorys);
         });
-    }
+    
   };
   // prev page handler
   const prevPage = () => {
