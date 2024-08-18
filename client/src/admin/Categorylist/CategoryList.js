@@ -13,7 +13,7 @@ function CategoryList() {
   const submitHandler=()=>{
     
     const token = localStorage.getItem('token') ;
-    axios.put(`http://blog-app-api-ten.vercel.app/category/${id}` ,{
+    axios.put(`https://blog-app-api-ten.vercel.app/category/${id}` ,{
       name:name,
       imageUrl: "ljngrrlnk" ,
     } , { headers: { Authorization: "Bearer "+token }
@@ -30,7 +30,7 @@ window.location.reload()
   const getcategorys = () => {
     console.log(token +" = token")
     if(token){
-    axios.get("http://blog-app-api-ten.vercel.app/category" , {
+    axios.get("https://blog-app-api-ten.vercel.app/category" , {
       headers: { Authorization: "Bearer "+token }
   })
 
@@ -43,7 +43,7 @@ window.location.reload()
   };
 
 const deleteCategory = (id)=>{
-    axios.delete(`http://blog-app-api-ten.vercel.app/category/${id}`,{
+    axios.delete(`https://blog-app-api-ten.vercel.app/category/${id}`,{
       headers: { Authorization: "Bearer "+token }
     })
     .then((res) => {

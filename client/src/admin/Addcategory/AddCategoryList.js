@@ -9,7 +9,7 @@ function AddCategoryList() {
   const submitHandler=()=>{
     
     const token = localStorage.getItem('token') ;
-    axios.post("http://blog-app-api-ten.vercel.app/category" ,{
+    axios.post("https://blog-app-api-ten.vercel.app/category" ,{
       name:name,
       imageUrl: "ljngrrlnk" ,
     } , { headers: { Authorization: "Bearer "+token }

@@ -21,7 +21,7 @@ function BlogList() {
     console.log(token + " = token");
     if (token) {
       axios
-        .get("http://blog-app-api-ten.vercel.app/blog", {
+        .get("https://blog-app-api-ten.vercel.app/blog", {
           headers: { Authorization: "Bearer " + token },
         })
 
@@ -35,7 +35,7 @@ function BlogList() {
   //delete blog by id
 
   const deleteBlog = (id)=>{
-    axios.delete(`http://blog-app-api-ten.vercel.app/blog/${id}`,{
+    axios.delete(`https://blog-app-api-ten.vercel.app/blog/${id}`,{
       headers: { Authorization: "Bearer "+token }
     })
     .then((res) => {
