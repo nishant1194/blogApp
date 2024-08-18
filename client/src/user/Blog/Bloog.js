@@ -37,8 +37,8 @@ function Bloog() {
   const [category, setCategory] = useState([]);
 
   useEffect(() => {
-    getBlogs();
     getcategorys();
+    getBlogs();
     getBlogsbyCategory();
   }, []);
 
@@ -50,8 +50,8 @@ function Bloog() {
   };
 
   //get all the blogs
-  const getBlogs = () => {
-      axios
+  const getBlogs = async () => {
+      await axios
         .get("https://blog-app-api-ten.vercel.app/blog")
 
         .then((res) => {
@@ -63,9 +63,9 @@ function Bloog() {
 
   //get blog by cayegory name
 
-  const getBlogsbyCategory = (category) => {
+  const getBlogsbyCategory = async (category) => {
  
-      axios
+    await axios
         .get(`https://blog-app-api-ten.vercel.app/blog/category/${category}`, {
           headers: { Authorization: "Bearer " + token },
         })
@@ -79,9 +79,9 @@ function Bloog() {
 
   //get categorys
 
-  const getcategorys = () => {
+  const getcategorys = async() => {
    
-      axios
+     await axios
         .get("https://blog-app-api-ten.vercel.app/category")
 
         .then((res) => {
