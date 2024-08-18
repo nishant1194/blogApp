@@ -14,7 +14,7 @@ function SignUp() {
 const SubmitHandler = (e)=>{
      e.preventDefault(); 
 
-        axios.post("http://localhost:8000/auth/user/signup",{
+        axios.post("http://blog-app-api-ten.vercel.app/auth/user/signup",{
             fullName:userName ,
             password:userPassward ,
             email:email 

@@ -54,7 +54,7 @@ function Bloog() {
     console.log(token + " = token");
     if (token) {
       axios
-        .get("http://localhost:8000/blog", {
+        .get("http://blog-app-api-ten.vercel.app/blog", {
           headers: { Authorization: "Bearer " + token },
         })
 
@@ -70,7 +70,7 @@ function Bloog() {
   const getBlogsbyCategory = (category) => {
     if (token) {
       axios
-        .get(`http://localhost:8000/blog/category/${category}`, {
+        .get(`http://blog-app-api-ten.vercel.app/blog/category/${category}`, {
           headers: { Authorization: "Bearer " + token },
         })
 
@@ -87,7 +87,7 @@ function Bloog() {
     console.log(token + " = token");
     if (token) {
       axios
-        .get("http://localhost:8000/category")
+        .get("http://blog-app-api-ten.vercel.app/category")
 
         .then((res) => {
           console.log(res.data.categorys);

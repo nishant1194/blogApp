@@ -13,7 +13,7 @@ function Loggin() {
 
  
     const SubmitHandler =(event) =>{
-        axios.post("http://localhost:8000/auth/login",{
+        axios.post("http://blog-app-api-ten.vercel.app/auth/login",{
             email:email,
             password: userPassword
         })
