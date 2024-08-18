@@ -54,9 +54,7 @@ function Bloog() {
     console.log(token + " = token");
     if (token) {
       axios
-        .get("https://blog-app-api-ten.vercel.app/blog", {
-          headers: { Authorization: "Bearer " + token },
-        })
+        .get("https://blog-app-api-ten.vercel.app/blog")
 
         .then((res) => {
           console.log(res.data.blogs);
