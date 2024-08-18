@@ -9,9 +9,10 @@ const categoryRoute = require('./admin/routes/Category') ;
 const authRoute = require('./admin/routes/Auth') ;
 const commentRoute = require('./admin/routes/Comment') ;
 
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
 app.use(cors());
-app.use(bodyPareser.urlencoded({extended:false})) ;
-app.use(bodyPareser.json()) ;
+
 
 async function connectToDatabase() {
     try {
@@ -26,6 +27,7 @@ async function connectToDatabase() {
   
   connectToDatabase();
 
+
 app.use('/blog' , blogRoute) ;
 app.use('/category' , categoryRoute) ;
 app.use('/auth' , authRoute) ;
@@ -33,12 +35,11 @@ app.use('/comment' , commentRoute) ;
 
 
 
-app.use((req,res)=>{
-    res.json({
-        msg:"ok"
-    })
+app.get('*',(req,res,next)=>{
+  res.status(200).json({
+    message:'received request'
+  })
 })
-
 
 
 

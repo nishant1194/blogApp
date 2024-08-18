@@ -17,6 +17,8 @@ import Contact from "./user/Contact/Contact.js";
 import Bloog from "./user/Blog/Bloog.js";
 import Logoutt from "./admin/logout/Logoutt.js";
 import Editcategory from "./admin/EditCategory/Editcategory.js";
+import axios from "axios";
+
 
 
 const router = createBrowserRouter([
@@ -93,6 +95,8 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
+  axios.defaults.withCredentials = true ;
+
   return (
     <>
       <RouterProvider router={router}> </RouterProvider>
