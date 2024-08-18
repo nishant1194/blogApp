@@ -3,6 +3,8 @@ import '../login/loginn.css'
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import Navbar from '../../user/Navbar/Navbar';
+import { useNavigate } from 'react-router-dom';
+
 
 
 
@@ -10,6 +12,7 @@ function Loggin() {
 
     const [email , setEmail] = useState(" ");
     const [userPassword , setuserPassward] = useState(" ");
+    const navigate = useNavigate();
 
  
     const SubmitHandler =(event) =>{
@@ -20,6 +23,8 @@ function Loggin() {
         .then(res=>{
             console.log(res.data)
             localStorage.setItem('token', res.data.token);
+            navigate('/');
+
        
         })
         .catch(err=>{
