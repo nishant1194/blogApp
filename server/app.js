@@ -11,7 +11,11 @@ const commentRoute = require('./admin/routes/Comment') ;
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
-app.use(cors());
+const corsOptions = {
+  origin: ['https://blog-app-neew.vercel.app','http://localhost:3000',
+      'http://localhost:3001'], // Allow only this origin
+  credentials: true, // Allow credentials
+};
 
 
 async function connectToDatabase() {
