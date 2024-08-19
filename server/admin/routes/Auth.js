@@ -63,7 +63,7 @@ router.post("/login", (req, res) => {
               userType: user[0].userType
             },
             "jaiShreeRam",
-            { expiresIn: "3m" }
+            { expiresIn: "30m" }
           );
 
           res.status(201).json({
