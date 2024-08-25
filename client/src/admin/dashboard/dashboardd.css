@@ -15,11 +15,22 @@
 
 
 .sideNav{
-    width: 300px;
+    width: 23%;
     background-color: #212B37;
+    position:fixed;
+    height: 100%;
+    top: 60px;
+    /* width: 100%; */
+    z-index: 1000;
 
 }
-
+.mainContainer{
+    background-color: rgb(233, 233, 233);
+    width: 77%;
+    padding: 25px;
+    margin: 0px 0px 0px 23% ;
+    /* flex-wrap: wrap; */
+}
 .logoContainer{
     width: 100%;
     display: flex;
@@ -63,8 +74,3 @@
 
 
 
-.mainContainer{
-    background-color: rgb(211, 238, 441);
-    width: 100%;
-    padding: 25px;
-}

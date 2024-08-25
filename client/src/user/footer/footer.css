@@ -41,3 +41,8 @@
     display: flex;
     justify-content: space-between;
 }
+
+.madeWLove{
+    margin: 0px 0px 0px 5px;
+    font-size: 20px;
+}

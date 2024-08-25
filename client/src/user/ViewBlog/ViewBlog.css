@@ -1,0 +1,66 @@
+.textAarea{
+    width: 70%;
+    padding: 40px;
+    /* background-color: aliceblue; */
+    margin: 20px 20px 10px 20px;
+
+}
+.containerrrrr{
+    display: flex;
+    justify-content: center;
+}
+
+.detailTitle{
+    font-size: 50px;
+    font-weight:500;
+}
+
+.autherrr{
+    font-size: 15px;
+    margin:5px 0px 40px 10px ;
+    color: rgb(42, 42, 42);
+    
+}
+.contenttdetail{
+    margin:25px 0px 0px 0px ;
+    font-size: 20px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.addComment{
+    width: 100%;
+    height:100%;
+    display: flex;
+}
+.writeComment{
+    width: 99%;
+    height: 30px;
+}
+
+.showComments{
+    
+    height: 100%;
+    padding: 10px;
+    background-color: rgb(245, 246, 246);
+}
+.comment1{
+    height: 100%;
+    
+}
+.userNName{
+    font-size: 15px;
+    font-weight: 600;
+}
+.time{
+    font-size: 12px;
+    font-weight: 400;
+}
+.commentTextx{
+    margin: 2px 0px 1px 0px ;
+}
+
+.linees{
+    height: 2px;
+    background-color: rgb(209, 210, 211);
+    margin: 3px 1px 8px 1px;
+}

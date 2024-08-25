@@ -3,10 +3,26 @@
     justify-content: space-between;
     background-color: rgb(233, 232, 232);
     align-items: center;
-  
+    top: 0;
+    width: 100%;
+    position: fixed;
+    z-index: 2000;
 
+}
+a{
+  text-decoration: none;
+}
 
-
+.psedunav{
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(233, 232, 232);
+  align-items: center;
+  top: 0;
+  width: 100%;
+  /* position: fixed; */
+  z-index: 1000;
+  visibility: hidden;
 }
 
 .leftNAv{

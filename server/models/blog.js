@@ -5,7 +5,10 @@ blogSchema = mongoose.Schema({
     description: String,
     imageUrl: String,
     category:String,
-})
+    upLoaderName:String,
+    upLoaderEmail:String,
+},
+{ timestamps: true })
 
 
 module.exports = mongoose.model('Blog' , blogSchema) ;

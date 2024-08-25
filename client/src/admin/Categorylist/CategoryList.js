@@ -1,6 +1,7 @@
 import React ,{useState,useEffect} from 'react'
 import './categorylistt.css'
 import axios from 'axios';
+import Loading from '../../helpers/Loadar/Loading';
 
 function CategoryList() {
   const [category, setCategory] = useState([]);
@@ -8,12 +9,11 @@ function CategoryList() {
   const [Edit, setEdit] = useState(false) ;
   const [name, setName] = useState('');
   const [id, setId] = useState('');
-
+  const[loadingCategory , setloadingCategory] = useState(true) ;
 
   const submitHandler=()=>{
-    
     const token = localStorage.getItem('token') ;
-    axios.put(`https://blog-app-api-ten.vercel.app/category/${id}` ,{
+    axios.put(`http://localhost:8000/category/${id}` ,{
       name:name,
       imageUrl: "ljngrrlnk" ,
     } , { headers: { Authorization: "Bearer "+token }
@@ -30,20 +30,21 @@ window.location.reload()
   const getcategorys = () => {
     console.log(token +" = token")
     if(token){
-    axios.get("https://blog-app-api-ten.vercel.app/category" , {
+    axios.get("http://localhost:8000/category" , {
       headers: { Authorization: "Bearer "+token }
   })
 
     .then((res) => {
       console.log(res.data.categorys);
       setCategory(res.data.categorys);
+      setloadingCategory(false) ;
     })
   }
   
   };
 
 const deleteCategory = (id)=>{
-    axios.delete(`https://blog-app-api-ten.vercel.app/category/${id}`,{
+    axios.delete(`http://localhost:8000/category/${id}`,{
       headers: { Authorization: "Bearer "+token }
     })
     .then((res) => {
@@ -71,11 +72,10 @@ const cancelHandler =()=>{
 
 if(Edit==false){
   return (
-    <div>
-     
-
+    <>
+  { loadingCategory?<Loading /> : <div>
      { category.map(data=>{
-        return( <div className="box">
+       return( <div className="box">
         <span className="catText">{data.name}</span>
         <img className='catListimg' src="http://localhost:3000/static/media/Nishant.9dcb755d866c80b0ca86.JPG"  alt="..." />
         
@@ -84,10 +84,8 @@ if(Edit==false){
         
       </div>)
       })}
-     
-      
-      
-    </div>
+    </div> }
+      </>
   )
 }
 else{

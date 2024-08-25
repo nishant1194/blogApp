@@ -26,6 +26,54 @@ function Navbar() {
   if (menuStatus == false) {
     return (
       <div>
+        <div className="psedunav"> 
+          <div className="leftNAv">
+            <img
+              src={Nishant}
+              alt=""
+              style={{
+                height: "60px",
+                width: "60px",
+                borderRadius: "50%",
+                marginRight: "20px",
+                marginLeft: "30px",
+              }}
+            />
+            <Link to="/" className="blogApp">
+              <span>Blog app</span>
+            </Link>
+          </div>
+          <div className="rightNav">
+            <Link to="/" className="linkNav">
+              Home
+            </Link>
+            <Link to="/bllog" className="linkNav">
+              Blog
+            </Link>
+            <Link to="/about" className="linkNav">
+              About
+            </Link>
+            <Link to="/contact" className="linkNav">
+              Contact
+            </Link>
+            {isAuthenticated ? (
+              <Link to="/admin/dashboard/admin/dashboard/blog-list" className="linkNav">
+                Dashboard
+              </Link>
+            ) : (
+              <Link to="/admin/login" className="linkNav">
+                Login
+              </Link>
+            )}
+          </div>
+          <button
+            className="menuIconbtn"
+            style={{ marginRight: "30px", style: "none" }}
+            onClick={menufunc}
+          >
+            <img src={icon} alt="" className="menuIcon" />
+          </button>
+        </div>
         <div className="navBarrr">
           <div className="leftNAv">
             <img
@@ -57,7 +105,7 @@ function Navbar() {
               Contact
             </Link>
             {isAuthenticated ? (
-              <Link to="/admin/dashboard/admin/dashboard/home" className="linkNav">
+              <Link to="/admin/dashboard/admin/dashboard/blog-list" className="linkNav">
                 Dashboard
               </Link>
             ) : (
@@ -78,7 +126,6 @@ function Navbar() {
     );
   } else {
     return (
-      <div>
         <div>
           <div className="navBarrr">
             <div className="leftNAv">
@@ -139,7 +186,7 @@ function Navbar() {
               )}
             </div>
           </div>
-        </div>
+    
       </div>
     );
   }

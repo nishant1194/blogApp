@@ -8,6 +8,14 @@ commentSchema = mongoose.Schema({
         type:String ,
         required: true
     },
+    userName:{
+        type:String ,
+        required: true
+    },
+    autherName:{
+        type:String ,
+        required: true
+    },
     blogId:{
         type:String ,
         required: true

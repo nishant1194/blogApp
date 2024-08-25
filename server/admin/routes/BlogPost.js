@@ -11,7 +11,9 @@ router.post('/' ,checkUser, (req , res) =>{
         tittle :req.body.tittle ,
         description: req.body.description ,
         imageUrl:req.body.imageUrl,
-        category:req.body.category
+        category:req.body.category,
+        upLoaderName:req.body.upLoaderName,
+        upLoaderEmail:req.body.upLoaderEmail
     })
 
     newBlog.save()
@@ -45,6 +47,22 @@ router.get('/' ,(req,res)=>{
 //get a blog by id
 router.get('/:id' , (req,res)=>{
     Blog.find({_id : req.params.id})
+    .then(result=>{
+        res.status(201).json({
+            blog:result
+    })
+    })
+    .catch(err=>{
+        console.log(err) ;
+        res.status(500).json({
+            error:err 
+    })
+    })
+})
+
+//get a blog by id
+router.get('/auther/:autherId' , (req,res)=>{
+    Blog.find({upLoaderName : req.params.autherId})
     .then(result=>{
         res.status(201).json({
             blog:result

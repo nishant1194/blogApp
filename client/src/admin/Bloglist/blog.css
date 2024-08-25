@@ -10,17 +10,25 @@
 }
 
 .cardblogAdmin{
-    width: 250px;
+    width: 30%;
     display: flex;
     flex-direction: column;
     margin: 0px 10px 40px 10px ;
 
     align-items: center;
-    border-radius: 20px;
+    /* border-radius: 20px; */
     background-color: rgb(255, 255, 255);
     padding: 30px 10px 20px 10px;
-    box-shadow: 1px 1px 10px rgb(113, 113, 113);
+    box-shadow: 1px 1px 10px rgb(218, 216, 216);
 
+}
+.cardblogAdmin:hover{
+    transform: scale(1.03);
+    transition-duration: 0.1s;
+}
+.blogDele:hover{
+    transform: scale(1.03);
+    transition-duration: 0.1s;
 }
 
 .blogDele{

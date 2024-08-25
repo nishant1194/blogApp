@@ -18,6 +18,7 @@ import Bloog from "./user/Blog/Bloog.js";
 import Logoutt from "./admin/logout/Logoutt.js";
 import Editcategory from "./admin/EditCategory/Editcategory.js";
 import axios from "axios";
+import ViewBlog from "./user/ViewBlog/ViewBlog.js";
 
 
 
@@ -38,6 +39,9 @@ const router = createBrowserRouter([
     },{
       path: "/bllog" ,
       element: <Bloog />
+    },{
+      path: "view/:id",
+      element: <ViewBlog />,
     },
   ]
 
@@ -90,6 +94,7 @@ const router = createBrowserRouter([
         path: "admin/dashboard/logout",
         element: <Logoutt />,
       },
+     
     ],
   },
 ]);

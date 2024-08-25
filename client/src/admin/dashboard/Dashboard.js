@@ -22,7 +22,7 @@ function Dashboard() {
             <img src={Nishant} alt="" className='logo'/>
             <h1 className='logoHeading'>Blog app</h1>
         </div>
-        <Link to='/admin/dashboard/admin/dashboard/home' className='link'> <DashboardIcon /><span style={{marginLeft:'10px'}}>Dashboard</span></Link>
+        {/* <Link to='/admin/dashboard/admin/dashboard/home' className='link'> <DashboardIcon /><span style={{marginLeft:'10px'}}>Dashboard</span></Link> */}
         <Link to='/admin/dashboard/admin/dashboard/blog-list' className='link'><EditNoteIcon /><span style={{marginLeft:'10px'}}>Blog List</span></Link>
         <Link to='/admin/dashboard/admin/dashboard/add-blog' className='link'><AddBoxIcon /><span style={{marginLeft:'10px'}}>Add Blog</span></Link>
         <Link to='/admin/dashboard/admin/dashboard/category-list' className='link'><CategoryIcon /><span style={{marginLeft:'10px'}}>Category List</span></Link>

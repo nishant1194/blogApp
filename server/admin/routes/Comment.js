@@ -8,9 +8,10 @@ router.post('/' , (req , res) =>{
     const newComment = new Comment({
         commentText: req.body.commentText ,
         email:req.body.email ,
-        blogId:req.body.blogId
+        userName:req.body.userName ,
+        blogId:req.body.blogId,
+        autherName:req.body.autherName
     })
-
     newComment.save()
     .then(result =>{
         res.status(201).json({
@@ -40,8 +41,8 @@ router.get('/' ,(req,res)=>{
 })
 
 
-//delete a bog by id
-router.delete('/:id' , (req,res)=>{
+//delete a blog by id
+router.delete('/auther/:id' , (req,res)=>{
     Comment.deleteOne({_id : req.params.id})
     .then(result=>{
         res.status(201).json({
@@ -56,14 +57,14 @@ router.delete('/:id' , (req,res)=>{
     })
 })
 
-//count all the comments
-router.get('/get/count/:blogiId' ,(req,res)=>{
-    Comment.find({blogId:req.params.blogiId}).countDocuments()
+//get comments by id
+
+router.get('/:blogiId' ,(req,res)=>{
+    Comment.find({blogId:req.params.blogiId})
     .then(result=>{
         res.status(201).json({
-            total: result 
+            comments: result 
         })
-
     })
     .catch(err=>{
         console.log(err) ;
@@ -72,5 +73,43 @@ router.get('/get/count/:blogiId' ,(req,res)=>{
     })
     })
 })
+
+
+//get comments by userId
+
+router.get('/user/:userId' ,(req,res)=>{
+    Comment.find({userName : req.params.userId})
+    .then(result=>{
+        res.status(201).json({
+            comments: result 
+        })
+    })
+    .catch(err=>{
+        console.log(err) ;
+        res.status(500).json({
+            error:err 
+    })
+    })
+})
+
+// get comments by autherName
+
+router.get('/auther/:autherId' ,(req,res)=>{
+    Comment.find({autherName:req.params.autherId})
+    .then(result=>{
+        res.status(201).json({
+            comments: result 
+        })
+    })
+
+    .catch(err=>{
+        console.log(err) ;
+        res.status(500).json({
+            error:err 
+    })
+    })
+})
+
+
 
 module.exports = router ;

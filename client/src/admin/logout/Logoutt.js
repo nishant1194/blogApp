@@ -1,14 +1,18 @@
 import React, { useState } from 'react'
 import '../logout/logoutt.css'
+import { useNavigate } from 'react-router-dom';
+
 
 function Logoutt() {
-
+const navigate = useNavigate() ;
 
     const SubmitHandler =(event) =>{
       localStorage.removeItem('token');
+      localStorage.removeItem('fullName');
+      localStorage.removeItem('email');
       event.preventDefault() ;
       alert("logout successfully");
-      window.location.reload();
+      navigate('/admin/login') ;
     }
 
     return (

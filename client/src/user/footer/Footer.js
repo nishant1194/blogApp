@@ -8,10 +8,13 @@ import { Link } from 'react-router-dom'
 function Footer() {
   return (
     <div className='mainfooter'>
-      <div className='section11'>BlogApp</div>
+      <div className='section11'>BlogApp
+        <br />
+        <div  className='madeWLove' >Made with <span style={{color:"red"}} >&hearts;</span> </div>
+      </div>
       <div className='section12'>
       <li className='exploref'>Explore</li>
-      <Link to='/home'>  <li className='footeritteems'>Home</li></Link>
+      <Link to='/'>  <li className='footeritteems'>Home</li></Link>
       <Link to='/bllog'>  <li className='footeritteems'>Blog</li></Link>
       <Link to='/about'>  <li className='footeritteems'>About Us</li></Link>
       <Link to='/contact'>  <li className='footeritteems atm'> Contact US</li></Link>
@@ -19,9 +22,9 @@ function Footer() {
       <div className='sec13'>
       <div className='section13'>Contact Us </div>
      <div className="sec13div">
-      <a href='https://www.linkedin.com/in/nishant-428476256/'>  <img src={linkedin} alt="" /></a>
-      <a href=''>  <img src={mail} alt="" /></a>
-      <a href='https://github.com/nishant1194'>  <img src={github} alt="" /></a>
+      <a href='https://www.linkedin.com/in/nishant-428476256/' target='black'>  <img src={linkedin} alt="" /></a>
+      <a href='mailto:nishantrpr1194@gmail.com'>  <img src={mail} alt="" /></a>
+      <a href='https://github.com/nishant1194' target='black'>  <img src={github} alt="" /></a>
         </div>
      
       </div>

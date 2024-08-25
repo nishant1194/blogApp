@@ -63,13 +63,13 @@ router.post("/login", (req, res) => {
               userType: user[0].userType
             },
             "jaiShreeRam",
-            { expiresIn: "3m" }
+            { expiresIn: "60m" }
           );
 
           res.status(201).json({
             email: user[0].email ,
             fullName: user[0].fullName,
-            token: token
+            token: token 
 
           })
         }

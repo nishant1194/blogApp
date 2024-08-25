@@ -8,6 +8,9 @@ import "react-multi-carousel/lib/styles.css";
 
 import { Sidebar } from 'primereact/sidebar';
 import Abccc from "../Navbar/Abccc";
+import { Link } from "react-router-dom";
+import Footer from "../footer/Footer";
+import Loading from "../../helpers/Loadar/Loading";
 
 const responsive = {
   superLargeDesktop: {
@@ -30,6 +33,8 @@ const responsive = {
 };
 function Bloog() {
   const [menuStatus, setStatus] = useState(false);
+ 
+  const[loadingBlog , setloadingBlog] = useState(true) ;
 
   const [blog, setBlog] = useState([]);
   const [page, setPage] = useState(1);
@@ -52,17 +57,16 @@ function Bloog() {
   //get all the blogs
   const getBlogs = () => {
     console.log(token + " = token");
-    if (token) {
+  
       axios
-        .get("https://blog-app-api-ten.vercel.app/blog", {
-          headers: { Authorization: "Bearer " + token },
-        })
+        .get("http://localhost:8000/blog")
 
         .then((res) => {
           console.log(res.data.blogs);
           setBlog(res.data.blogs);
+          setloadingBlog(false);
         });
-    }
+    
   };
 
   //get blog by cayegory name
@@ -70,7 +74,7 @@ function Bloog() {
   const getBlogsbyCategory = (category) => {
     if (token) {
       axios
-        .get(`https://blog-app-api-ten.vercel.app/blog/category/${category}`, {
+        .get(`http://localhost:8000/blog/category/${category}`, {
           headers: { Authorization: "Bearer " + token },
         })
 
@@ -87,7 +91,7 @@ function Bloog() {
     console.log(token + " = token");
     if (token) {
       axios
-        .get("https://blog-app-api-ten.vercel.app/category")
+        .get("http://localhost:8000/category")
 
         .then((res) => {
           console.log(res.data.categorys);
@@ -127,7 +131,7 @@ function Bloog() {
         >
           All Category
         </div>
-        <Carousel
+      <Carousel
           slidesToSlide={1}
           responsive={responsive}
           transitionDuration={500}
@@ -153,12 +157,12 @@ function Bloog() {
      
 
       <div style={{ display: "flex" }}>
-        <div
+      { loadingBlog ? <Loading /> :  <div
           className="leftsidee"
           style={{ display: "flex", flexWrap: "wrap", width: "100%" }}
         >
-          <div className="cardContanerr" >
-            {blog.slice(page * 6 - 6, page * 6).map((data) => {
+         <div className="cardContanerr" >
+            {blog.slice(page * 6 - 6, page * 6).reverse().map((data) => {
               return (
                 <div className="cardblogg">
                   <img
@@ -168,26 +172,31 @@ function Bloog() {
                     style={{
                       height: "220px",
                       width: "100%",
-                      marginBottom: "5px",
+                      marginBottom: "15px",
                     }}
                   />
                   <div style={{ textAlign: "left" }}>{data.category}</div>
+                  <Link to={`http://localhost:3000/view/${data._id}`}>
                   <div
                     className="blogtittle"
                     style={{
+                      height:"100%",
                       fontSize: "20px",
                       marginBottom: "5px",
                       fontWeight: "500",
                       textAlign: "justify",
+                      color:"black"
                     }}
                   >
                     {data.tittle}
                   </div>
+                </Link>
+                <div style={{ textAlign: "left" }}> Auther :- {data.upLoaderName}</div>
                 </div>
               );
             })}
           </div>
-        </div>
+        </div>}
       </div>
       <div className="line"></div>
       <div className="butttonSection">
@@ -203,6 +212,7 @@ function Bloog() {
           Next &gt;
         </button>
       </div>
+      <Footer />
     </div>
   );
 }
