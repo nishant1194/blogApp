@@ -13,7 +13,7 @@ function CommentList() {
 
   const getCommentsByAuther = async(idd) => {
    await axios
-      .get(`http://localhost:8000/comment/auther/${idd}`)
+      .get(`https://blog-app-api-ten.vercel.app/comment/auther/${idd}`)
       .then((res) => {
         setCommentt(res.data.comments);
         console.log(res.data.comments);
@@ -27,7 +27,7 @@ function CommentList() {
 
   const deleteHandler =(idd) =>{
     
-    axios.delete(`http://localhost:8000/comment/auther/${idd}`)
+    axios.delete(`https://blog-app-api-ten.vercel.app/comment/auther/${idd}`)
     .then(resp=>{
       alert("deleted successfully") ;
 
