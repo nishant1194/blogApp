@@ -59,7 +59,7 @@ function Bloog() {
     console.log(token + " = token");
   
       axios
-        .get("http://localhost:8000/blog")
+        .get("https://blog-app-api-ten.vercel.app/blog")
         .then((res) => {
           console.log(res.data.blogs);
           setBlog(res.data.blogs);
@@ -71,11 +71,8 @@ function Bloog() {
   //get blog by cayegory name
 
   const getBlogsbyCategory = (category) => {
-    if (token) {
       axios
-        .get(`http://localhost:8000/blog/category/${category}`, { 
-          headers: { Authorization: "Bearer " + token },
-        })
+        .get(`https://blog-app-api-ten.vercel.app/category/${category}`)
 
         .then((res) => {
           console.log(res.data.blog);
@@ -83,22 +80,20 @@ function Bloog() {
         });
    
   };
-}
 
   //get categorys
 
   const getcategorys = () => {
     console.log(token + " = token");
-    if (token) {
       axios
-        .get("http://localhost:8000/category")
+        .get("https://blog-app-api-ten.vercel.app/category")
         .then((res) => {
           console.log(res.data.categorys);
           setCategory(res.data.categorys);
         });
     
   };
-}
+
   
   // prev page handler
   const prevPage = () => {
