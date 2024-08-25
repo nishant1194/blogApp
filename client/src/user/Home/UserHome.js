@@ -61,9 +61,7 @@ function UserHome() {
   ]);
   const getcategory = async () => {
     axios
-      .get("https://blog-app-api-ten.vercel.app/category", {
-        withCredentials: true,
-      })
+      .get("https://blog-app-api-ten.vercel.app/category")
       .then((res) => {
         console.log(res.data.categorys);
         setcategory(res.data.categorys);
@@ -84,7 +82,6 @@ function UserHome() {
   const getBlogs = () => {
     axios
       .get("https://blog-app-api-ten.vercel.app/blog")
-
       .then((res) => {
         console.log(res.data.blogs);
         console.log("get req");
