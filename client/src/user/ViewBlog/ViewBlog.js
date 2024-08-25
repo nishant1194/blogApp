@@ -6,6 +6,7 @@ import "../ViewBlog/ViewBlog.css";
 import { IdContext } from "../../context/idContext";
 import Footer from "../footer/Footer";
 import Loading from "../../helpers/Loadar/Loading";
+import commentIcon from "../../assets/CommentIcon.png"
 
 function ViewBlog() {
   const convertToDaysAgo = (dateString) => {
@@ -134,17 +135,22 @@ function ViewBlog() {
                 __html: blogDetails.blog[0].description,
               }}
             />
+            <div className="linnee"></div>
             <button
               className="seecoments"
               onClick={() => {
                 getComments(senId);
               }}
             >
-              Comments
+             <img src={commentIcon} alt="" style={{height:"15px" , width:"20px"}}/>
+             <span>Comments</span>
             </button>
 
             <div className="commentsection">
-              <div className="addComment">
+             
+              {!showcomments ? (
+                <div className="showComments">
+                   <div className="addComment">
                 <input
                   type="text"
                   className="writeComment"
@@ -163,8 +169,6 @@ function ViewBlog() {
                   Add
                 </button>
               </div>
-              {!showcomments ? (
-                <div className="showComments">
                   {loadingcomment ? (
                     <Loading />
                   ) : (
