@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-import React, { useState } from "react";
-import "../login/loginn.css";
-import axios from "axios";
-import { Link } from "react-router-dom";
-import Navbar from "../../user/Navbar/Navbar";
-import { useNavigate } from "react-router-dom";
-=======
+
 import React, { useState } from 'react'
 import '../login/loginn.css'
 import axios from 'axios';
@@ -15,17 +8,14 @@ import { useNavigate } from 'react-router-dom';
 
 
 
->>>>>>> origin/main
 
 function Loggin() {
   const [email, setEmail] = useState(" ");
   const [userPassword, setuserPassward] = useState(" ");
-
-<<<<<<< HEAD
   const navigate = useNavigate();
   const SubmitHandler = (event) => {
     axios
-      .post("http://localhost:8000/auth/login", {
+      .post("https://blog-app-api-ten.vercel.app/auth/login", {
         email: email,
         password: userPassword,
       })
@@ -43,34 +33,7 @@ function Loggin() {
     event.preventDefault();
   };
 
-  return (
-=======
-    const [email , setEmail] = useState(" ");
-    const [userPassword , setuserPassward] = useState(" ");
-    const navigate = useNavigate();
-
- 
-    const SubmitHandler =(event) =>{
-        axios.post("https://blog-app-api-ten.vercel.app/auth/login",{
-            email:email,
-            password: userPassword
-        })
-        .then(res=>{
-            console.log(res.data)
-            localStorage.setItem('token', res.data.token);
-            navigate('/');
-
-       
-        })
-        .catch(err=>{
-            console.log(err)
-        })
-        event.preventDefault() ;
-    }
-
-
     return (
->>>>>>> origin/main
     <div>
       <Navbar />
       <div className="loginContainer">
@@ -110,3 +73,4 @@ function Loggin() {
 }
 
 export default Loggin;
+
