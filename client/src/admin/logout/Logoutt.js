@@ -34,6 +34,5 @@ const navigate = useNavigate() ;
   )
 }
 
-export default Logoutt
+export default Logoutt ;
 
-export default Logoutt
