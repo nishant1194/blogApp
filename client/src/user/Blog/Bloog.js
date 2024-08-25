@@ -55,18 +55,11 @@ function Bloog() {
   };
 
   //get all the blogs
-<<<<<<< HEAD
   const getBlogs = () => {
     console.log(token + " = token");
   
       axios
         .get("http://localhost:8000/blog")
-=======
-  const getBlogs = async () => {
-      await axios
-        .get("https://blog-app-api-ten.vercel.app/blog")
->>>>>>> origin/main
-
         .then((res) => {
           console.log(res.data.blogs);
           setBlog(res.data.blogs);
@@ -77,17 +70,10 @@ function Bloog() {
 
   //get blog by cayegory name
 
-<<<<<<< HEAD
   const getBlogsbyCategory = (category) => {
     if (token) {
       axios
-        .get(`http://localhost:8000/blog/category/${category}`, {
-=======
-  const getBlogsbyCategory = async (category) => {
- 
-    await axios
-        .get(`https://blog-app-api-ten.vercel.app/blog/category/${category}`, {
->>>>>>> origin/main
+        .get(`http://localhost:8000/blog/category/${category}`, { 
           headers: { Authorization: "Bearer " + token },
         })
 
@@ -97,28 +83,23 @@ function Bloog() {
         });
    
   };
+}
 
   //get categorys
 
-<<<<<<< HEAD
   const getcategorys = () => {
     console.log(token + " = token");
     if (token) {
       axios
         .get("http://localhost:8000/category")
-=======
-  const getcategorys = async() => {
-   
-     await axios
-        .get("https://blog-app-api-ten.vercel.app/category")
->>>>>>> origin/main
-
         .then((res) => {
           console.log(res.data.categorys);
           setCategory(res.data.categorys);
         });
     
   };
+}
+  
   // prev page handler
   const prevPage = () => {
     if (page > 1) {
