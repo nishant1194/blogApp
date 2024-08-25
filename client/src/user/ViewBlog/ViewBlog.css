@@ -41,7 +41,7 @@
     
     height: 100%;
     padding: 10px;
-    background-color: rgb(245, 246, 246);
+    background-color: rgb(255, 255, 255);
 }
 .comment1{
     height: 100%;
@@ -62,5 +62,36 @@
 .linees{
     height: 2px;
     background-color: rgb(209, 210, 211);
-    margin: 3px 1px 8px 1px;
+    margin: 3px 1px 20px 1px;
+}
+
+.seecoments{
+    display:flex;
+    align-items: center;
+  
+    font-weight: 600;
+    font-size: large;
+    border: 0;
+    height: 30px;
+    width: 130px;
+    border-radius: 20px;
+    border: 2px solid black;
+}
+
+.linnee{
+    height: 2px;
+    background-color: rgb(164, 164, 164);
+    border-radius: 20%;
+    margin: 30px 0px 20px 0px ;
+}
+
+.writeComment{
+    padding: 10px;
+    height: 40px;
+    border-radius: 20px;
+    border: 2px solid rgb(115, 115, 115);
+}
+
+.addComment{
+    margin: 10px 0px 20px 0px;
 }
