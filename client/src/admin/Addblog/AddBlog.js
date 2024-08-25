@@ -55,6 +55,13 @@ const submitHandler=()=>{
     upLoaderEmail:email 
   } , { headers: { Authorization: "Bearer "+token }
 })
+  .then(rep=>{
+    alert("Added") ;
+  })
+  .catch(err=>{
+    console.log(err);
+  }
+  )
 }
 
 
