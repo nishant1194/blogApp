@@ -90,7 +90,7 @@ function Bloog() {
         });
     
   };
-}
+
   
   // prev page handler
   const prevPage = () => {
