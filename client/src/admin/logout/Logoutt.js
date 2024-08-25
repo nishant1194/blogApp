@@ -4,7 +4,12 @@ import { useNavigate } from 'react-router-dom';
 
 
 function Logoutt() {
+<<<<<<< HEAD
 const navigate = useNavigate() ;
+=======
+
+  const navigate = useNavigate();
+>>>>>>> origin/main
 
     const SubmitHandler =(event) =>{
       localStorage.removeItem('token');
@@ -12,7 +17,11 @@ const navigate = useNavigate() ;
       localStorage.removeItem('email');
       event.preventDefault() ;
       alert("logout successfully");
+<<<<<<< HEAD
       navigate('/admin/login') ;
+=======
+      navigate('/');
+>>>>>>> origin/main
     }
 
     return (

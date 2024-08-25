@@ -181,7 +181,7 @@ function Navbar() {
                 </Link>
               ) : (
                 <Link to="/admin/login" className="linkNavv">
-                  Login
+                  Login/SignUp
                 </Link>
               )}
             </div>
