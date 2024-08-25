@@ -61,7 +61,7 @@ function UserHome() {
   ]);
   const getcategory = async () => {
     axios
-      .get("http://localhost:8000/category", {
+      .get("https://blog-app-api-ten.vercel.app/category", {
         withCredentials: true,
       })
       .then((res) => {
@@ -83,7 +83,7 @@ function UserHome() {
   //get all the blogs
   const getBlogs = () => {
     axios
-      .get("http://localhost:8000/blog")
+      .get("https://blog-app-api-ten.vercel.app/blog")
 
       .then((res) => {
         console.log(res.data.blogs);
