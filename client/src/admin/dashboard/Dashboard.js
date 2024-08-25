@@ -27,7 +27,7 @@ function Dashboard() {
         <Link to='/admin/dashboard/admin/dashboard/add-blog' className='link'><AddBoxIcon /><span style={{marginLeft:'10px'}}>Add Blog</span></Link>
         <Link to='/admin/dashboard/admin/dashboard/category-list' className='link'><CategoryIcon /><span style={{marginLeft:'10px'}}>Category List</span></Link>
         <Link  to='/admin/dashboard/admin/dashboard/add-category' className='link'><PlaylistAddIcon /><span style={{marginLeft:'10px'}}>Add Category</span></Link>
-      {/*     <Link to='/admin/dashboard/admin/dashboard/comment' className='link'><PeopleAltIcon /><span style={{marginLeft:'10px'}}>Comments</span></Link>*/}
+        <Link to='/admin/dashboard/admin/dashboard/comment' className='link'><PeopleAltIcon /><span style={{marginLeft:'10px'}}>Comments</span></Link>
        <Link to='/admin/dashboard/admin/dashboard/logout' className='link'><PeopleAltIcon/><span style={{marginLeft:'10px'}}>Logout</span></Link>
         <Link  className='link '><span style={{marginLeft:'10px', visibility:"hidden"}}>Logout</span></Link>
 
