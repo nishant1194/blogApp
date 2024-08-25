@@ -50,7 +50,7 @@ function ViewBlog() {
   const [desc, setDesc] = useState();
   const getBlogs = (idd) => {
     axios
-      .get(`http://localhost:8000/blog/${idd}`)
+      .get(`https://blog-app-api-ten.vercel.app/blog/${idd}`)
       .then((res) => {
         setBlogDetails(res.data);
         setDesc(blogDetails.blog[0].description);
@@ -62,7 +62,7 @@ function ViewBlog() {
 
   const getComments = (idd) => {
     axios
-      .get(`http://localhost:8000/comment/${idd}`)
+      .get(`https://blog-app-api-ten.vercel.app/comment/${idd}`)
       .then((res) => {
         setComments(res.data.comments);
 
@@ -81,7 +81,7 @@ function ViewBlog() {
       return ;
     }
     axios
-      .post("http://localhost:8000/comment", {
+      .post("https://blog-app-api-ten.vercel.app/comment", {
         commentText: commentText,
         email: email,
         userName: fullName,
