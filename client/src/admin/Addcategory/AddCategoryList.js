@@ -5,10 +5,10 @@ import axios from 'axios';
 
 function AddCategoryList() {
   const [name, setName] = useState('');
+    const token = localStorage.getItem('token') ;
 
   const submitHandler=()=>{
     
-    const token = localStorage.getItem('token') ;
     axios.post("https://blog-app-api-ten.vercel.app/category" ,{
       name:name,
       imageUrl: "ljngrrlnk" ,
