@@ -183,7 +183,7 @@ function ViewBlog() {
                               <div className="comment1">
                                 <div className="userNName">
                                   {data.userName} &nbsp;{" "}
-                                  <span className="time">{data.updatedAt ? convertToDaysAgo(data.updatedAt):"time not found"}</span>
+                                  <span className="time">{convertToDaysAgo(data.createdAt)}</span>
                                 </div>
                                 <div className="commentTextx">
                                   {data.commentText}{" "}
