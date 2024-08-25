@@ -36,7 +36,7 @@ function AddBlog() {
   const[uploaderemail, setuploaderemail] = useState(email);
 
   const getcategory = async() => {
-    await axios.get("http://localhost:8000/category").then((res) => {
+    await axios.get("https://blog-app-api-ten.vercel.app/category").then((res) => {
       console.log(res.data.categorys);
       setCategory(res.data.categorys);
     });
@@ -46,7 +46,7 @@ function AddBlog() {
   }, []);
 
 const submitHandler=()=>{
-  axios.post("http://localhost:8000/blog" ,{
+  axios.post("https://blog-app-api-ten.vercel.app/blog" ,{
     tittle:title,
     description:value ,
     imageUrl: "ljngrrlnk" ,
