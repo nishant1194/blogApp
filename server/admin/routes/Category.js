@@ -48,7 +48,7 @@ router.get('/',(req,res)=>{
 })
 
 //get a category by id
-router.get('/:id',checkUser , (req,res)=>{
+router.get('/:id' , (req,res)=>{
     Category.find({_id : req.params.id})
     .then(result=>{
         res.status(201).json({
