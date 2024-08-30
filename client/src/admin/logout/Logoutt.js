@@ -2,12 +2,9 @@ import React, { useState } from 'react'
 import '../logout/logoutt.css'
 import { useNavigate } from 'react-router-dom';
 
-
 function Logoutt() {
 const navigate = useNavigate() ;
-
-
-
+    
     const SubmitHandler =(event) =>{
       localStorage.removeItem('token');
       localStorage.removeItem('fullName');
@@ -20,7 +17,6 @@ const navigate = useNavigate() ;
     }
 
     return (
-      
     <div>
      <div className="loginContainerrr">
      <div className="loginBoxxx">
