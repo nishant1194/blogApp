@@ -21,11 +21,15 @@ function Loggin() {
       })
       .then((res) => {
         console.log(res.data);
+        if(token){
         localStorage.setItem("token", res.data.token);
         localStorage.setItem("fullName", res.data.fullName);
         localStorage.setItem("email", res.data.email);
-        alert("login successfully");
+        alert("Login successfully");
         navigate("/");
+        }else{
+           alert("Wrong email or password");
+        }
       })
       .catch((err) => {
         console.log(err);
