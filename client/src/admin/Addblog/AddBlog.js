@@ -99,7 +99,7 @@ const submitHandler=()=>{
       </select>
       
       <input type="file" className='formitemm'  />
-      <img src="http://localhost:3000/static/media/Nishant.9dcb755d866c80b0ca86.JPG" alt="..." className="inputImg formitemm" />
+      <img src="https://blog-app-neew.vercel.app/static/media/Nishant.9dcb755d866c80b0ca86.JPG" alt="..." className="inputImg formitemm" />
       <button className='catSubmit formitemm' type='submit' onClick={submitHandler}>Submit</button>
     </form>
 
