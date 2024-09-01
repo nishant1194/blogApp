@@ -53,7 +53,7 @@ const submitHandler=()=>{
     category: ccategory,
     upLoaderName:fullName,
     upLoaderEmail:email 
-  } , { headers: { Authorization: "Bearer "+token }
+  } , { headers: { Authorization: "Bearer " + token }
 })
   .then(rep=>{
     alert("Added") ;
