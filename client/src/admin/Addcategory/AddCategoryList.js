@@ -26,7 +26,7 @@ function AddCategoryList() {
     <form className='catForm'>
       <input className='catInput formitem' placeholder='Category Name' value={name} onChange={(e)=>{setName(e.target.value)}} />
       <input type="file" className='formitem'/>
-      <img src="http://localhost:3000/static/media/Nishant.9dcb755d866c80b0ca86.JPG" alt="..." className="inputImg formitem" />
+      <img src="https://blog-app-neew.vercel.app/static/media/Nishant.9dcb755d866c80b0ca86.JPG" alt="..." className="inputImg formitem" />
       <button className='catSubmit formitem' type='submit' onClick={submitHandler}>Submit</button>
     </form>
 
