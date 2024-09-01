@@ -21,7 +21,7 @@ function Loggin() {
       })
       .then((res) => {
         console.log(res.data);
-        if(token){
+        if(res.data.token){
         localStorage.setItem("token", res.data.token);
         localStorage.setItem("fullName", res.data.fullName);
         localStorage.setItem("email", res.data.email);
