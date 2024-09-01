@@ -13,29 +13,39 @@ function Loggin() {
   const [email, setEmail] = useState(" ");
   const [userPassword, setuserPassward] = useState(" ");
   const navigate = useNavigate();
-  const SubmitHandler = (event) => {
-    axios
-      .post("https://blog-app-api-ten.vercel.app/auth/login", {
-        email: email,
-        password: userPassword,
-      })
-      .then((res) => {
-        console.log(res.data);
-        if(res.data.token){
+ const SubmitHandler = (event) => {
+  // Prevent default form submission
+  event.preventDefault();
+
+  // Check if email and password are defined
+  if (!email || !userPassword) {
+    alert("Please enter both email and password");
+    return;
+  }
+
+  axios
+    .post("https://blog-app-api-ten.vercel.app/auth/login", {
+      email: email,
+      password: userPassword,
+    })
+    .then((res) => {
+      console.log(res.data);
+      if (res.data.token !== undefined) {
         localStorage.setItem("token", res.data.token);
         localStorage.setItem("fullName", res.data.fullName);
         localStorage.setItem("email", res.data.email);
         alert("Login successfully");
         navigate("/");
-        }else{
-           alert("Wrong email or password");
-        }
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-    event.preventDefault();
-  };
+      } else {
+        alert("Wrong email or password");
+      }
+    })
+    .catch((err) => {
+      console.log(err);
+      alert("An error occurred during login. Please try again.");
+    });
+};
+
 
     return (
     <div>
