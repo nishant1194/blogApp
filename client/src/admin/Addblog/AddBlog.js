@@ -31,6 +31,7 @@ function AddBlog() {
   const token = localStorage.getItem('token') ;
   const fullName = localStorage.getItem('fullName') ;
   const email = localStorage.getItem('email') ;
+  console.log("fullName = "+fullName);
 
   const[uploaderBy, setuploaderBy] = useState(fullName);
   const[uploaderemail, setuploaderemail] = useState(email);
