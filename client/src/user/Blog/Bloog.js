@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 import Footer from "../footer/Footer";
 import Loading from "../../helpers/Loadar/Loading";
 
-const responsive = {
+const responsive ={
   superLargeDesktop: {
     // the naming can be any, depends on you.
     breakpoint: { max: 4000, min: 3000 },
@@ -107,7 +107,7 @@ function Bloog() {
     }
   };
 
-  return (
+  return(
     <div>
       <Navbar />
 
