@@ -5,7 +5,7 @@ module.exports = (req, res, next) => {  // Added 'next' here
         const token = req.headers.authorization.split(" ")[1];
         const verify = jwt.verify(token, "jaiShreeRam");
         console.log(verify);
-        if (verify.userType == admin) {
+        if (verify) {
             next();  
         } else {
             return res.status(201).json({
