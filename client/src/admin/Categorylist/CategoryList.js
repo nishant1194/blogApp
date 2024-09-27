@@ -33,7 +33,6 @@ window.location.reload()
     axios.get("https://blog-app-api-ten.vercel.app/category" , {
       headers: { Authorization: "Bearer "+token }
   })
-
     .then((res) => {
       console.log(res.data.categorys);
       setCategory(res.data.categorys);
@@ -70,14 +69,14 @@ const cancelHandler =()=>{
 }
 
 
-if(Edit==false){
+if(Edit===false){
   return (
     <>
   { loadingCategory?<Loading /> : <div>
-     { category.map(data=>{
+     { category.map((data)=>{
        return( <div className="box">
         <span className="catText">{data.name}</span>
-        <img className='catListimg' src="http://localhost:3000/static/media/Nishant.9dcb755d866c80b0ca86.JPG"  alt="..." />
+        <img className='catListimg' src={data.imageUrl}  alt="..." />
         
           <button className="edit btnn" onClick={()=>{editFunc(data._id)}}>edit</button>
           <button className="delete btnn" onClick={()=>{deleteCategory(data._id)}}>delete</button>
