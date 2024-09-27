@@ -185,7 +185,7 @@ function UserHome() {
         
           {blog.slice().reverse().map((data) => {
           return (
-            <Link to={`http://localhost:3000/view/${data._id}`}>
+            <Link to={`https://blog-app-neew.vercel.app/view/${data._id}`}>
               <div className="cardbloggg">
                 <img
                   src={data.imageUrl}
