@@ -61,7 +61,9 @@ function UserHome() {
   ]);
   const getcategory = async () => {
     axios
-      .get("https://blog-app-api-ten.vercel.app/category")
+      .get("https://blog-app-api-ten.vercel.app/category", {
+        withCredentials: true,
+      })
       .then((res) => {
         console.log(res.data.categorys);
         setcategory(res.data.categorys);
@@ -82,6 +84,7 @@ function UserHome() {
   const getBlogs = () => {
     axios
       .get("https://blog-app-api-ten.vercel.app/blog")
+
       .then((res) => {
         console.log(res.data.blogs);
         console.log("get req");
@@ -146,7 +149,7 @@ function UserHome() {
               return (
                 <div className="usercatItems">
                   <img
-                    src={Nishant}
+                    src={data.imageUrl}
                     alt=""
                     style={{
                       height: "200px",
@@ -182,10 +185,10 @@ function UserHome() {
         
           {blog.slice().reverse().map((data) => {
           return (
-            <Link to={`https://blog-app-neew.vercel.app/view/${data._id}`}>
+            <Link to={`http://localhost:3000/view/${data._id}`}>
               <div className="cardbloggg">
                 <img
-                  src={Nishant}
+                  src={data.imageUrl}
                   alt=""
                   className="imgblog"
                   style={{
