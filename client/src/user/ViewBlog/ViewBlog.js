@@ -125,7 +125,7 @@ function ViewBlog() {
             </div>
 
             <img
-              src="http://localhost:3000/static/media/Nishant.9dcb755d866c80b0ca86.JPG"
+              src={blogDetails.blog[0].imageUrl}
               alt=""
               style={{ height: "400px", width: "100%" }}
             />
