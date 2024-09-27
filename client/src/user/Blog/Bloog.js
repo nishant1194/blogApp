@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 import Footer from "../footer/Footer";
 import Loading from "../../helpers/Loadar/Loading";
 
-const responsive ={
+const responsive = {
   superLargeDesktop: {
     // the naming can be any, depends on you.
     breakpoint: { max: 4000, min: 3000 },
@@ -55,7 +55,9 @@ function Bloog() {
   };
 
   //get all the blogs
-  const getBlogs = () => {  
+  const getBlogs = () => {
+    console.log(token + " = token");
+  
       axios
         .get("https://blog-app-api-ten.vercel.app/blog")
         .then((res) => {
@@ -69,19 +71,25 @@ function Bloog() {
   //get blog by cayegory name
 
   const getBlogsbyCategory = (category) => {
+    if (token) {
       axios
-        .get(`https://blog-app-api-ten.vercel.app/blog/category/${category}`)
+        .get(`https://blog-app-api-ten.vercel.app/blog/category/${category}`, { 
+          headers: { Authorization: "Bearer " + token },
+        })
+
         .then((res) => {
           console.log(res.data.blog);
           setBlog(res.data.blog);
         });
    
   };
-
+}
 
   //get categorys
 
   const getcategorys = () => {
+    console.log(token + " = token");
+    if (token) {
       axios
         .get("https://blog-app-api-ten.vercel.app/category")
         .then((res) => {
@@ -90,7 +98,7 @@ function Bloog() {
         });
     
   };
-
+}
   
   // prev page handler
   const prevPage = () => {
@@ -107,7 +115,7 @@ function Bloog() {
     }
   };
 
-  return(
+  return (
     <div>
       <Navbar />
 
@@ -159,8 +167,8 @@ function Bloog() {
               return (
                 <div className="cardblogg">
                   <img
-                    src={Nishant}
-                    alt=""
+                    src={data.imageUrl}
+                    alt="..."
                     className="imgblog"
                     style={{
                       height: "220px",
@@ -169,7 +177,7 @@ function Bloog() {
                     }}
                   />
                   <div style={{ textAlign: "left" }}>{data.category}</div>
-                  <Link to={`/view/${data._id}`}>
+                  <Link to={`http://localhost:3000/view/${data._id}`}>
                   <div
                     className="blogtittle"
                     style={{
