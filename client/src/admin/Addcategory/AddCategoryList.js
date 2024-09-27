@@ -13,7 +13,7 @@ function AddCategoryList() {
     e.preventDefault();
 
     const token = localStorage.getItem('token') ;
-    axios.post("http://localhost:8000/category" ,{
+    axios.post("https://blog-app-api-ten.vercel.app/category" ,{
       name:name,
       imageUrl: image ,
     } , { headers: { Authorization: "Bearer "+token }
