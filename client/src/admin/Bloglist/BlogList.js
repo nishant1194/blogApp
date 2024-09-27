@@ -65,7 +65,7 @@ function BlogList() {
             return( 
               <div className="cardblogAdmin">
               <img
-                src={Nishant}
+                src={data.imageUrl}
                 alt=""
                 className="imgblog"
                 style={{
@@ -87,7 +87,7 @@ function BlogList() {
                 {data.tittle}
               </div>
               <div style={{display:"flex" , justifyContent:"end"}}>
-            <Link to={`/view/${data._id}`}>
+            <Link to={`http://localhost:3000/view/${data._id}`}>
              <button className='blogDele' type='submit' onClick={()=>{ setId(data._id)}} >View</button>
             </Link> 
               <button className='blogDele' type='submit' onClick={()=>{deleteBlog(data._id)}} >Delete</button>
