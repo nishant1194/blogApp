@@ -9,8 +9,9 @@ function AddBlog() {
     toolbar: [
         [{ font: [] }],
         [{ header: [1, 2, 3, 4, 5, 6, false] }],
-        ["bold", "italic", "underline", "strike"],import React, { useState , useEffect } from 'react';
-import './addblog.css'
+        ["bold", "italic", "underline", "strike"],}
+import React, { useState , useEffect } from 'react';
+import './addblog.css' ;
 import ReactQuill, { Quill } from "react-quill";
 import 'react-quill/dist/quill.snow.css';
 import axios from 'axios' ; 
