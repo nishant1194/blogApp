@@ -177,7 +177,7 @@ function Bloog() {
                     }}
                   />
                   <div style={{ textAlign: "left" }}>{data.category}</div>
-                  <Link to={`http://localhost:3000/view/${data._id}`}>
+                  <Link to={`https://blog-app-neew.vercel.app/view/${data._id}`}>
                   <div
                     className="blogtittle"
                     style={{
