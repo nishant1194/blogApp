@@ -138,7 +138,7 @@ function UserHome() {
             responsive={responsive}
             autoPlay={true}
             autoPlaySpeed={2000}
-            infinite={false}
+            infinite={true}
             transitionDuration={500}
             containerClass="carousel-container"
             removeArrowOnDeviceType={["tablet", "mobile"]}
