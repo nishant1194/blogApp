@@ -35,10 +35,10 @@ function AboutUser() {
           <br />I am Nishant. Currently pursuing my B.Tech in one of the
           prestigious college of India, Indian Institute of Technology, Ropar.
           <br /> I am a full stack developer. I develope webApps using MERN
-          stack.  <br />I also made mobile Apps with React-Native. <br /> Check out my resume <a href="https://docs.google.com/document/d/18LSfE0S6uyISmD60QPehtbu8ELwICRlhMgX0aIXml_U/edit?usp=sharing">here</a> and protfollio <a href="https://portfolio-sigma-one-53.vercel.app/#about">here</a>.
+          stack.  <br />I also made mobile Apps with React-Native. <br /> Check out my resume <a href="https://drive.google.com/file/d/1BooSpofpNEeSKnGiwXKwMbPl_ydu5JwF/view?usp=sharing">here</a> and protfollio <a href="https://portfolio-sigma-one-53.vercel.app/#about">here</a>.
 
           <div style={{display:"flex" , justifyContent:"space-evenly"}}><button className="bbtn"><a href="https://portfolio-sigma-one-53.vercel.app/#about" target="blank">Portfollio</a></button>
-          <button className="bbtn"><a href="https://docs.google.com/document/d/18LSfE0S6uyISmD60QPehtbu8ELwICRlhMgX0aIXml_U/edit?usp=sharing" target="blank"> Resume</a></button></div>
+          <button className="bbtn"><a href="https://drive.google.com/file/d/1BooSpofpNEeSKnGiwXKwMbPl_ydu5JwF/view?usp=sharing" target="blank"> Resume</a></button></div>
         </p>
         </div>
         <img src={Nishant} alt="" className="imgaboutme"/>
