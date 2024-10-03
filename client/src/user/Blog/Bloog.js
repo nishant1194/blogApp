@@ -73,9 +73,7 @@ function Bloog() {
   const getBlogsbyCategory = (category) => {
     if (token) {
       axios
-        .get(`https://blog-app-api-ten.vercel.app/blog/category/${category}`, { 
-          headers: { Authorization: "Bearer " + token },
-        })
+        .get(`https://blog-app-api-ten.vercel.app/blog/category/${category}`)
 
         .then((res) => {
           console.log(res.data.blog);
